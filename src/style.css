@@ -1,0 +1,68 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300&family=Public+Sans:wght@100&display=swap');
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  body {
+    /* font-family: 'Public Sans', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+  }
+
+  .smooth-bg {
+    background: linear-gradient(45deg, #3e15f5, #1A5D1A, #8BC34A);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .elevation {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .custom-bg {
+    background-image: linear-gradient(0deg, #14A2B8, #14A2B8),
+      linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom left;
+  }
+
+  .loading-container {
+    text-align: center;
+  }
+
+  .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #057b8d;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
